@@ -9,7 +9,7 @@ export default function Home() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542051812871-757500850028?q=80&w=2070&auto=format&fit=crop)' }} 
+        style={{ backgroundImage: 'url(https://img.cdn1.vip/i/69c22272cd19a_1774330482.webp)' }} 
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 md:via-black/50 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -30,10 +30,10 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-center space-y-4"
           >
-            <h1 className="text-5xl md:text-7xl font-serif font-medium tracking-widest drop-shadow-2xl">大明宫</h1>
-            <h2 className="text-2xl md:text-6xl font-light tracking-wider drop-shadow-2xl mt-2 md:mt-0">Digital Daming Palace</h2>
+            <h1 className="text-5xl md:text-7xl font-serif font-medium tracking-widest drop-shadow-2xl">AI+大明宫</h1>
+            <h2 className="text-2xl md:text-6xl font-light tracking-wider drop-shadow-2xl mt-2 md:mt-0">DIGITAL DAMING PALACE</h2>
             <p className="max-w-2xl mx-auto mt-6 text-sm md:text-lg text-gray-300 tracking-widest leading-relaxed px-4">
-              千官望长安，万国拜含元。全方位数字化展示大唐帝国的大朝正宫，重温盛世长安的恢弘气象。
+              千官望长安  万国拜含元
             </p>
             
             <div className="pt-8 md:pt-12 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
