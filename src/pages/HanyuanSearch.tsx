@@ -13,7 +13,7 @@ export default function HanyuanSearch() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=2000&auto=format&fit=crop" 
+          src="https://img.cdn1.vip/i/69c22bb809528_1774332856.webp" 
           alt="Hanyuan Hall" 
           className="w-full h-full object-cover opacity-40" 
         />
