@@ -39,7 +39,7 @@ export default function AIChat() {
       
       {/* Background */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <img src="https://images.unsplash.com/photo-1542051812871-757500850028?q=80&w=2000&auto=format&fit=crop" alt="Background" className="w-full h-full object-cover" />
+        <img src="https://img.cdn1.vip/i/69c233e0e7e91_1774334944.webp" alt="Background" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
       </div>
 
