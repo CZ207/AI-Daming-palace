@@ -1,11 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import TopNav from '../components/TopNav';
 import { Send, Bot, User } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export default function AIChat() {
-  const [messages, setMessages] = useState([
-    { role: 'assistant', content: '您好！我是大明宫AI助手。您可以向我询问关于大明宫的历史、建筑、文化等任何问题。例如：“大明宫是谁建的？”或“含元殿有多大？”' }
+  const [messages, setMessages] = useState<Message[]>([
+    { role: 'assistant', content: '您好！我是大明宫 AI 助手。您可以向我询问关于大明宫的历史、建筑、文化等任何问题。例如：“大明宫是谁建的？”或“含元殿有多大？”' }
   ]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -23,13 +28,13 @@ export default function AIChat() {
     if (!input.trim()) return;
 
     // Add user message
-    const newMessages = [...messages, { role: 'user', content: input }];
+    const newMessages: Message[] = [...messages, { role: 'user', content: input }];
     setMessages(newMessages);
     setInput('');
 
     // Simulate AI response
     setTimeout(() => {
-      setMessages([...newMessages, { role: 'assistant', content: '这是一个AI演示界面。在后期接入真实的大语言模型后，我将为您提供关于“' + input + '”的详细解答。' }]);
+      setMessages([...newMessages, { role: 'assistant', content: '这是一个 AI 演示界面。在后期接入真实的大语言模型后，我将为您提供关于"' + input + '"的详细解答。' }]);
     }, 1000);
   };
 
@@ -38,17 +43,18 @@ export default function AIChat() {
       <TopNav />
       
       {/* Background */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <img src="https://img.cdn1.vip/i/69c233e0e7e91_1774334944.webp" alt="Background" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
-      </div>
+      {/* Background */}
+<div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+  <img src="https://edgeoneimg.cdn.sn/i/69c220c519e59_1774330053.webp" alt="Background" className="w-full h-full object-cover" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+</div>
 
       {/* Chat Container */}
       <div className="relative z-10 flex-1 flex flex-col max-w-4xl w-full mx-auto pt-24 pb-6 px-4 md:px-6">
         
         {/* Header */}
         <div className="mb-6 text-center">
-          <h1 className="text-3xl font-serif tracking-widest text-red-500">AI+大明宫</h1>
+          <h1 className="text-3xl font-serif tracking-widest text-red-500">AI+ 大明宫</h1>
           <p className="text-xs text-gray-400 mt-2 tracking-widest">您的专属大唐文化导览</p>
         </div>
 
@@ -84,7 +90,7 @@ export default function AIChat() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="向AI提问关于大明宫的问题..."
+            placeholder="向 AI 提问关于大明宫的问题..."
             className="flex-1 bg-transparent px-6 py-3 text-white placeholder-white/40 outline-none text-sm md:text-base"
           />
           <button 
